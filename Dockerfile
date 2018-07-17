@@ -4,6 +4,7 @@ ARG WEBDAV_REALM=webdav
 ARG WEBDAV_USER=user
 ARG WEBDAV_PW=secret
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
