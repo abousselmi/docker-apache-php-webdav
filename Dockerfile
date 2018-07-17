@@ -19,8 +19,9 @@ RUN apt-get update && \
 		libapache2-mod-php \
 		expect
 
-COPY 000-default.conf webdav.conf /etc/apache2/sites-available/
-COPY htdig.exp .
+COPY config/apache/000-default.conf 
+COPY config/webdav/webdav.conf /etc/apache2/sites-available/
+COPY config/webdav/htdig.exp .
 
 RUN mkdir /var/www/webdav && \
 	mkdir /var/www/webdav/atoms && \
